@@ -17,7 +17,9 @@
 !/log/.keep
 !/tmp/.keep
 
+# idea specific
 .idea
+*.iml
 
 /node_modules
 /yarn-error.log
