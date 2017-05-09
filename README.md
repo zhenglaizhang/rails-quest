@@ -2,6 +2,8 @@
 
 ## Guidelines
 
+- Don't Repeat Yourself
+  - Every piece of knowledge must have a single, unambiguous, authoritative representation within a system
 - Convention over configuration
 - Style
 - Property based tests
@@ -30,3 +32,29 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+### Run & Test
+
+```shell
+bin/rails server
+# browse http://localhost:3000/
+```
+
+### Development
+
+```shell
+# new controller
+bin/rails generate controller Welcome index
+```
+
+### Environment (ARCH Linux)
+
+```shell
+pac ruby sqlite3 nodejs
+ruby -v
+sqlite3 --version
+gem install rails
+rails --version
+
+# rails new rails-quest
+```
