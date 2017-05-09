@@ -1,9 +1,15 @@
 # README
 
+### TODOs
+
+- code analysis
+- formatting tool
+
 ## Guidelines
 
 - Convention over configuration
-- Style
+- Consistent code style
+- Code Analysis tools applied
 - Property based tests
 
 ### 
