@@ -6,6 +6,11 @@ class ArticlesController < ApplicationController
 
   #  Rails by default returns 204 No Content response for an action if we don't specify what the response should be
   def create
-    render plain: params[:article].inspect
+    # render plain: params[:article].inspect
+
+    # every Rails model can be initialized with its respective attributes, which are automatically mapped to the respective database columns.
+    @article = Article.new(params[:article])
+    @article.save
+    redirect_to @article
   end
 end
