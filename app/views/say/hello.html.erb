@@ -9,5 +9,13 @@
 <p>
   Say <%= link_to 'Goodbye', say_goodbye_path %>
 </p>
+<% @files = Dir.glob '*' %>
+<p>Files in dir: </p>
+<ul>
+  <% @files.each do |f| %>
+      <li><%= f %></li>
+  <% end %>
+</ul>
+<p>Time in one hour<%= 1.hour.from_now.localtime %></p>
 </body>
 </html>
