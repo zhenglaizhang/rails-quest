@@ -55,6 +55,9 @@ bin/rails generate controller Articles
 
 # new model
 bin/rails generate model Article title:string text:text
+# run migration
+bin/rails db:migrate
+bin/rails db:migrate RAILS_ENV=production
 ```
 
 ### Environment (ARCH Linux)
