@@ -45,6 +45,13 @@ bin/rails server
 ```shell
 # new controller
 bin/rails generate controller Welcome index
+
+
+# new resources
+# update config/routes.rb with `resources` DSL
+bin/rails routes
+# generate related controller
+bin/rails generate controller Articles
 ```
 
 ### Environment (ARCH Linux)
