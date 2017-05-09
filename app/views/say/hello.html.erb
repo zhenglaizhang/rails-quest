@@ -7,7 +7,7 @@
 <h1>Hello Rails</h1>
 <h3>It is now <%= @time %></h3>
 <p>
-  Say <a href="/say/goodbye">Goodbye</a>!
+  Say <%= link_to 'Goodbye', say_goodbye_path %>
 </p>
 </body>
 </html>
