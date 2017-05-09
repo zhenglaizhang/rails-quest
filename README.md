@@ -52,6 +52,9 @@ bin/rails generate controller Welcome index
 bin/rails routes
 # generate related controller
 bin/rails generate controller Articles
+
+# new model
+bin/rails generate model Article title:string text:text
 ```
 
 ### Environment (ARCH Linux)
