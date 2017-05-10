@@ -7,6 +7,8 @@
 
 ## Guidelines
 
+- Don't Repeat Yourself
+  - Every piece of knowledge must have a single, unambiguous, authoritative representation within a system
 - Convention over configuration
 - Consistent code style
 - Code Analysis tools applied
@@ -38,8 +40,42 @@ Things you may want to cover:
 * ...
 
 
-### Commands
+### Run & Test
 
 ```shell 
 bin/rails test
+bin/rails server
+# browse http://localhost:3000/
+```
+
+### Development
+
+```shell
+# new controller
+bin/rails generate controller Welcome index
+
+
+# new resources
+# update config/routes.rb with `resources` DSL
+bin/rails routes
+# generate related controller
+bin/rails generate controller Articles
+
+# new model
+bin/rails generate model Article title:string text:text
+# run migration
+bin/rails db:migrate
+bin/rails db:migrate RAILS_ENV=production
+```
+
+### Environment (ARCH Linux)
+
+```shell
+pac ruby sqlite3 nodejs
+ruby -v
+sqlite3 --version
+gem install rails
+rails --version
+
+# rails new rails-quest
 ```
