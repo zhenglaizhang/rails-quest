@@ -1,4 +1,4 @@
-# README
+# Agile Web Development with Rails
 
 ### TODOs
 
