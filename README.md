@@ -4,6 +4,7 @@
 
 - code analysis
 - formatting tool
+- fix tests
 
 ## Guidelines
 
