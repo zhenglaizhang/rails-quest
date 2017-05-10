@@ -12,19 +12,20 @@
 
 ActiveRecord::Schema.define(version: 20170509161918) do
 
-  create_table "products", force: :cascade do |t|
-    t.string "title"
-    t.text "description"
-    t.string "image_url"
-    t.decimal "price"
-  end
-end
-ActiveRecord::Schema.define(version: 20170509085413) do
-
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.text "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "products", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.string "image_url"
+    t.decimal "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
 end

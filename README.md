@@ -66,6 +66,9 @@ bin/rails generate model Article title:string text:text
 # run migration
 bin/rails db:migrate
 bin/rails db:migrate RAILS_ENV=production
+
+# new scaffold
+bin/rails generate scaffold Product title:string description:text image_url:string price:decimal
 ```
 
 ### Environment (ARCH Linux)
