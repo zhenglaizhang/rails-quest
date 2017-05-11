@@ -14,6 +14,7 @@
 - Consistent code style
 - Code Analysis tools applied
 - Property based tests
+- Cache high-traffic area
 
 ### 
 
