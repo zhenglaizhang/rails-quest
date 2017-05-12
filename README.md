@@ -72,6 +72,10 @@ bin/rails db:migrate RAILS_ENV=production
 
 # new scaffold
 bin/rails generate scaffold Product title:string description:text image_url:string price:decimal
+
+
+# enable development mode cache
+bin/rails dev:cache
 ```
 
 ### Environment (ARCH Linux)
