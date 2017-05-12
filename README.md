@@ -44,7 +44,8 @@ Things you may want to cover:
 
 ### Run & Test
 
-```shell 
+```shell
+bin/rails seed
 bin/rails test
 bin/rails server
 # browse http://localhost:3000/
