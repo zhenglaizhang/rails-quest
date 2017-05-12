@@ -85,3 +85,21 @@ rails --version
 
 # rails new rails-quest
 ```
+
+
+## Study Plan
+
+- [ ] ruby culture
+- [ ] pure ruby
+- [ ] ruby tooling (`irb`, `ruby`)
+- [ ] functional ruby
+- [ ] functional ruby
+
+## How to learn Ruby
+
+```shell
+export RI="--format ansi --width 70"
+ri GC
+ri GC::eanble
+ri assoc
+```
