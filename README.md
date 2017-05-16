@@ -101,6 +101,10 @@ rails --version
 
 ## How to learn Ruby
 
+- `irb`
+
+### Doc
+
 ```shell
 export RI="--format ansi --width 70"
 ri GC
