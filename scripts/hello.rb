@@ -122,3 +122,10 @@ foo bar'.gsub(/\A../, 'hell')
 'The car costs $1000 and the cat costs $10'.scan(/\d+/) {|d| puts d}
 
 
+# build env.
+require 'rbconfig'
+include RbConfig
+puts CONFIG.keys
+puts CONFIG['host']
+puts CONFIG['libdir']
+

@@ -111,3 +111,11 @@ ri GC
 ri GC::eanble
 ri assoc
 ```
+
+### Rake
+
+```shell
+cd scripts
+rake delete_backups
+rake -T
+```
