@@ -120,3 +120,5 @@ foo bar'.gsub(/\A../, 'hell')
 'This is a test'.scan(/\w\w/) {|x| puts x}
 
 'The car costs $1000 and the cat costs $10'.scan(/\d+/) {|d| puts d}
+
+
