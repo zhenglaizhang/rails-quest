@@ -99,3 +99,24 @@ puts 'abc' * 5
 
 puts 'abc' > 'abd'
 puts 'x'.ord
+
+
+# sec: regular expression
+puts 'foo bar foo'.sub('foo', 'bar')
+puts 'foo bar foo'.gsub('foo', 'bar')
+# /^../ means “any two characters immediately after the start of a line.
+puts 'foo bar foo'.sub(/^../, 'hell')
+puts 'foo bar
+foo bar'.gsub(/^../, 'hell')
+puts 'foo bar
+foo bar'.gsub(/\A../, 'hell')
+
+# If you want to anchor to the absolute start or end of a string, you can use \A and \z, respectively,
+# whereas ^ and $ anchor to the starts and ends of lines within a string
+
+'xyz'.scan(/./) {|letter| puts letter}
+'This is a test'.scan(/../) {|x| puts x}
+2.times { puts }
+'This is a test'.scan(/\w\w/) {|x| puts x}
+
+'The car costs $1000 and the cat costs $10'.scan(/\d+/) {|d| puts d}
