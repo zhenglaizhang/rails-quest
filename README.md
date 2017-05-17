@@ -114,6 +114,8 @@ ri assoc
 
 ### Rake
 
+> https://martinfowler.com/articles/rake.html
+
 ```shell
 cd scripts
 rake delete_backups
