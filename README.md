@@ -16,6 +16,7 @@
 - Property based tests
 - Cache high-traffic area
 - Use RSpec(behavior-driven, user stories focused) & TDD to drive better design and code quality
+ - Initial expectations -> Meet expectations -> Iterate it!!
 
 ### 
 
