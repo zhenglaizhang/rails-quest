@@ -15,6 +15,7 @@
 - Code Analysis tools applied
 - Property based tests
 - Cache high-traffic area
+- Use RSpec(behavior-driven, user stories focused) & TDD to drive better design and code quality
 
 ### 
 
@@ -120,4 +121,11 @@ ri assoc
 cd scripts
 rake delete_backups
 rake -T
+```
+
+### Basic Testing
+
+```shell 
+gem install rspec
+rspec ts_spec.rb
 ```
