@@ -17,6 +17,8 @@
 - Cache high-traffic area
 - Use Cucumber & RSpec(behavior-driven, user stories focused) & TDD to drive better design and code quality
  - executable specifications 
+- Use RSpec(behavior-driven, user stories focused) & TDD to drive better design and code quality
+  - problem domain => automated acceptance tests => specification for both: documentation + tests
 
 ### 
 
