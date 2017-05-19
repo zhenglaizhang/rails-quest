@@ -15,8 +15,8 @@
 - Code Analysis tools applied
 - Property based tests
 - Cache high-traffic area
-- Use RSpec(behavior-driven, user stories focused) & TDD to drive better design and code quality
- - Initial expectations -> Meet expectations -> Iterate it!!
+- Use Cucumber & RSpec(behavior-driven, user stories focused) & TDD to drive better design and code quality
+ - executable specifications 
 
 ### 
 
@@ -127,6 +127,6 @@ rake -T
 ### Basic Testing
 
 ```shell 
-gem install rspec
+gem install rspec cucumber shoulda
 rspec ts_spec.rb
 ```
