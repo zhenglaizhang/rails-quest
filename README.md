@@ -5,6 +5,7 @@
 - code analysis
 - formatting tool
 - fix tests
+- `RDoc`
 
 ## Guidelines
 
