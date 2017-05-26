@@ -1,4 +1,4 @@
-# 联极有限公司Ruby编程风格指南
+# 联极Ruby编程风格指南
 
 我们需要使用统一的Ruby编码风,践行Ruby 的最佳实践，目前是写出可维护的高质量代码。无论你选择何种风格，务必在使用时保持连贯性。
 
@@ -169,61 +169,7 @@
     song.play
   end
   ```
-
-* 当将一个条件表达式的结果赋值给一个变量时，保持分支缩排在同一层级。
-
-  ```Ruby
-  # 差 - 非常费解
-  kind = case year
-  when 1850..1889 then 'Blues'
-  when 1890..1909 then 'Ragtime'
-  when 1910..1929 then 'New Orleans Jazz'
-  when 1930..1939 then 'Swing'
-  when 1940..1950 then 'Bebop'
-  else 'Jazz'
-  end
-
-  result = if some_cond
-    calc_something
-  else
-    calc_something_else
-  end
-
-  # 好 - 结构清晰
-  kind = case year
-         when 1850..1889 then 'Blues'
-         when 1890..1909 then 'Ragtime'
-         when 1910..1929 then 'New Orleans Jazz'
-         when 1930..1939 then 'Swing'
-         when 1940..1950 then 'Bebop'
-         else 'Jazz'
-         end
-
-  result = if some_cond
-             calc_something
-           else
-             calc_something_else
-           end
-
-  # 好 - 并且更好地利用行宽
-  kind =
-    case year
-    when 1850..1889 then 'Blues'
-    when 1890..1909 then 'Ragtime'
-    when 1910..1929 then 'New Orleans Jazz'
-    when 1930..1939 then 'Swing'
-    when 1940..1950 then 'Bebop'
-    else 'Jazz'
-    end
-
-  result =
-    if some_cond
-      calc_something
-    else
-      calc_something_else
-    end
-  ```
-
+  
 * 在各个方法定义之间添加空行，并且将方法分成若干合乎逻辑的段落。
 
   ```Ruby
@@ -245,6 +191,7 @@
   ```Ruby
   # 差 - 使用了两个空行
   some_method
+  ```
 
 
   some_method
@@ -700,7 +647,7 @@
   end
   ```
 
-*   倾向使用三元操作符（`?:`）而不是 `if/then/else/end` 结构。前者更为常见且简练。
+* 倾向使用三元操作符（`?:`）而不是 `if/then/else/end` 结构。前者更为常见且简练。
 
 
   ```Ruby
@@ -970,21 +917,21 @@
 * 对于无限循环，使用 `Kernel#loop` 而不是 `while/until`。
 
 
-    ```ruby
+    ​```ruby
     # 差
     while true
       do_something
     end
-
+    
     until false
       do_something
     end
-
+    
     # 好
     loop do
       do_something
     end
-    ```
+    ​```
 
 * 对于后置条件循环语句，倾向使用 `Kernel#loop` 与 `break` 的组合，而不是 `begin/end/until` 或 `begin/end/while`。
 
@@ -1540,19 +1487,19 @@
 * 不做显式的 `non-nil` 检查，除非检查对象是布尔变量。
 
 
-    ```ruby
+    ​```ruby
     # 差
     do_something if !something.nil?
     do_something if something != nil
-
+    
     # 好
     do_something if something
-
+    
     # 好 - 检查对象是布尔变量
     def value_set?
       !@some_boolean.nil?
     end
-    ```
+    ​```
 
 * 避免使用 `BEGIN` 区块。
 
@@ -2997,7 +2944,7 @@
 * 使用统一的风格创建字符串字面量。在 Ruby 社区中存在两种流行的风格：默认单引号（风格 A）与默认双引号（风格 B）。
 
 
-  * **（风格 A）** 当你不需要字符串插值或特殊字符（比如 `\t`、`\n`、`'`）时，倾向使用单引号。
+*   **（风格 A）** 当你不需要字符串插值或特殊字符（比如 `\t`、`\n`、`'`）时，倾向使用单引号。
 
     ```Ruby
     # 差
@@ -3007,7 +2954,7 @@
     name = 'Bozhidar'
     ```
 
-  * **（风格 B）** 除非字符串中包含双引号，或是你希望抑制转义字符，否则倾向使用双引号。
+* **（风格 B）** 除非字符串中包含双引号，或是你希望抑制转义字符，否则倾向使用双引号。
 
     ```Ruby
     # 差
@@ -3097,18 +3044,18 @@
 * 当存在更快速、更专业的替代方案时，不要使用 `String#gsub`。
 
 
-    ```Ruby
+    ​```Ruby
     url = 'http://example.com'
     str = 'lisp-case-rules'
-
+    
     # 差
     url.gsub('http://', 'https://')
     str.gsub('-', '_')
-
+    
     # 好
     url.sub('http://', 'https://')
     str.tr('-', '_')
-    ```
+    ​```
 
 * heredocs 中的多行文本会保留各行的前导空白。因此做好如何缩排的规划。
 
@@ -3372,13 +3319,13 @@
 * 对于 `class_eval` 方法，倾向使用区块形式，而不是字符串插值形式。
 
 
-  - 当使用字符串插值形式时，总是提供 `__FILE__` 及 `__LINE__`，以使你的调用栈看起来具有意义：
+-   当使用字符串插值形式时，总是提供 `__FILE__` 及 `__LINE__`，以使你的调用栈看起来具有意义：
 
     ```Ruby
     class_eval 'def use_relative_model_naming?; true; end', __FILE__, __LINE__
     ```
 
-  - 倾向使用 `define_method` 而不是 `class_eval { def ... }`
+- 倾向使用 `define_method` 而不是 `class_eval { def ... }`
 
 * 当使用 `class_eval`（或其他的 `eval`）的字符串插值形式时，添加一个注释区块来说明它是如何工作的（来自 Rails 代码中的技巧）。
 
@@ -3404,7 +3351,7 @@
 * 避免使用 `method_missing`。它会使你的调用栈变得凌乱；其方法不被罗列在 `#methods` 中；拼错的方法可能会默默地工作（`nukes.launch_state = false`）。优先考虑使用委托、代理、或是 `define_method` 来替代。如果你必须使用 `method_missing` 的话，务必做到以下几点：
 
 
-  - 确保[同时定义了 `respond_to_missing?`](http://blog.marc-andre.ca/2010/11/methodmissing-politely.html)。
+-   确保[同时定义了 `respond_to_missing?`](http://blog.marc-andre.ca/2010/11/methodmissing-politely.html)。
   - 仅仅捕获那些具有良好语义前缀的方法，像是 `find_by_*`——让你的代码愈确定愈好。
   - 在语句的最后调用 `super`。
   - 委托到确定的、非魔术的方法，比如：
