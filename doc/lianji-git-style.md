@@ -2,7 +2,7 @@
 
 ## Host
 
-* 统一采用[Bitbucket](https://bitbucket.org)来管理代码，提供一个高可靠且私密的代码管理服务器t 
+* 统一采用[Bitbucket](https://bitbucket.org)来管理代码，它提供了一个高可靠且私密的基于git协议的代码管理服务。 
 
 ## Branches
 
